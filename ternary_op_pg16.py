@@ -1,0 +1,5 @@
+num=int(input("Enter a number: "))
+print("Odd") if num % 2 else print("Even")
+l=input("List of items pls : ").split()
+k=input("Search key : ")
+print("Available") if k in l else print("Not available")
