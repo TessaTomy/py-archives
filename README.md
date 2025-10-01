@@ -1,4 +1,4 @@
-# py-archives
+# 🗂️ _py-archives_
 
-A growing collection of authored Python routines and class-based explorations.  
-This repo evolves as I learn—starting with core syntax and expanding into modular logic and structure.
+_A growing collection of authored Python routines and class-based explorations._
+_This repo evolves as I learn—starting with core syntax and expanding into modular logic and structure._
