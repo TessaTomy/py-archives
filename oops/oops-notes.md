@@ -95,3 +95,40 @@ class Car(Vehicle): # Car inherits from Vehicle
 
 * **Method Overriding:** A subclass provides its own specific implementation of a method that is already defined in its superclass.
 * **Operator Overloading:** Implementing special **Dunder Methods** (e.g., `__add__` for `+`) to make custom objects work with standard operators.
+  
+---
+
+## 6. 💡 `@property` Decorators (Pythonic Accessors)
+
+The `@property` decorator provides a clean, Pythonic way to define **getters**, **setters**, and **deleters** for attributes. It allows you to use methods to manage attribute access while treating the attributes as simple variables from the outside.
+
+This achieves **encapsulation** (validation, computation, etc.) without sacrificing the simplicity of dot-notation access.
+
+### 🐍 Practical `@property` Example
+
+```python
+class Person:
+    def __init__(self, initial_age):
+        self._age = initial_age 
+
+    @property
+    def age(self):
+        return self._age
+
+    @age.setter
+    def age(self, new_value):
+        self._age = new_value
+
+    @age.deleter
+    def age(self):
+        del self._age
+
+# --- Usage Demonstration ---
+
+person = Person(30)
+
+person.age = 45
+print(person.age)
+
+del person.age #remove attribute for the object
+```
