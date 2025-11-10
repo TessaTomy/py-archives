@@ -132,3 +132,11 @@ print(person.age)
 
 del person.age #remove attribute for the object
 ```
+## 7. 🔮 Built-in Attribute Management Functions
+
+| Function | Purpose | Equivalent Operator/Syntax | Example Usage |
+| :--- | :--- | :--- | :--- |
+| `getattr(obj, name, [default])` | Retrieves the value of the named attribute from `obj`. | `obj.name` | `value = getattr(obj, "color", "blue")` |
+| `setattr(obj, name, value)` | Assigns `value` to the named attribute of `obj`. | `obj.name = value` | `setattr(obj, "speed", 50)` |
+| `hasattr(obj, name)` | Checks if `obj` has a named attribute. Returns `True` or `False`. | (No direct operator) | `if hasattr(obj, "model"):` |
+| `delattr(obj, name)` | Deletes the named attribute from `obj`. | `del obj.name` | `delattr(obj, "temp_data")` |
