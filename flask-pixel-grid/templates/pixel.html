@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kranky&family=Mynerve&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-heading">Pixel Art Generator</h1>
+        <div class="controls">
+            <label for="gridSize">Grid Size: <span id="sizeValue">16x16</span></label>
+            <input type="range" id="gridSize" min="4" max="64" value="16" step="1">
+
+            <label for="colorPicker" class="color-label">Color:</label>
+            <input type="color" id="colorPicker" value="#000fff"> <button id="clearBtn">Clear Grid</button>
+        </div>
+
+        <div id="gridContainer" class="grid-container">
+            </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

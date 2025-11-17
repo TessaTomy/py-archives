@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Creator - Welcome</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kranky&family=Mynerve&display=swap" rel="stylesheet">
+
+    <style>
+        /* Define your color scheme locally */
+        :root {
+            --primary-color: #89253e;     /* Dark Red/Maroon */
+            --secondary-color: #1a1a1a;   /* Dark Background */
+            --background-color: #0d0d0d;  /* Deepest Black */
+            --accent-color: #3a6186;      /* Deep Blue */
+            --clear-btn-start: #3a6186;   /* Deep Blue Gradient start */
+            --clear-btn-end: #89253e;     /* Dark Red Gradient end */
+        }
+
+        /* Minimal Reset and Font Application */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🚀 BACKGROUND FIX: Cinematic Dark Blue Wash */
+        body {
+            font-family: "Mynerve", Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #1b2839 0%, var(--background-color) 70%);
+            color: var(--accent-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container for the Intro Page (Floating Effect) */
+        .intro-page {
+            max-width: 800px;
+            padding: 40px;
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+            text-align: center;
+
+            /* Matching App Controls Panel Aesthetics */
+            border: 1px solid #333;
+            outline: none;
+
+            /* 🚀 FLOATING EFFECT STYLES */
+            transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+            transform: translateY(-10px); /* Lift the box up */
+
+            /* Large, soft shadow to mimic distance and glow from below */
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.5), /* Depth shadow */
+                0 0 20px rgba(58, 97, 134, 0.4); /* Accent glow */
+        }
+
+        /* Optional: Slight sink effect on hover */
+        .intro-page:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.7),
+                0 0 30px rgba(137, 37, 62, 0.5); /* Primary glow on hover */
+        }
+
+        /* Heading Style (Matches App's .page-heading) */
+        .page-heading {
+            font-family: 'Kranky', serif;
+            font-size: 3.5em;
+
+            color: var(--primary-color);
+            text-shadow: none;
+            text-align: center;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* Text Styles */
+        .intro-text {
+            font-size: 1.4rem;
+            color: #f0f0f0;
+            margin-bottom: 40px;
+            font-family: 'Mynerve', cursive;
+        }
+
+        /* Button Style (Matches Clear button) */
+        .primary-btn {
+            background: linear-gradient(to right, var(--clear-btn-start), var(--clear-btn-end));
+            color: #f0f0f0;
+            border: none;
+            padding: 18px 40px;
+            font-family: inherit;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+
+            box-shadow: 0 4px 10px rgba(58, 97, 134, 0.4);
+            border-bottom: none;
+        }
+
+        .primary-btn:hover {
+            background: linear-gradient(to right, #4c759f, #9c355c);
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(58, 97, 134, 0.6);
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container intro-page">
+        <h1 class="page-heading">🎨 Pixel Art Creator</h1>
+        <p class="intro-text">
+            Welcome! Start your custom retro pixel art journey on a dynamic grid.
+        </p>
+
+        <a href="/pixel">
+            <button class="primary-btn">Start Drawing</button>
+        </a>
+
+    </div>
+</body>
+</html>

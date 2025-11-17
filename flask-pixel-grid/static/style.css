@@ -1,0 +1,193 @@
+/* Minimalistic Reset and Typography */
+.mynerve-regular {
+  font-family: "Mynerve", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kranky-regular {
+  font-family: "Kranky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+    /* 💥 UPDATED COLORS: Blue/Maroon Gradient Theme 💥 */
+    --primary-color: #89253e;     /* Dark Red/Maroon (Text, Accents) */
+    --secondary-color: #1a1a1a;   /* Dark Background (Near Black) */
+    --background-color: #0d0d0d;  /* Deepest Black (Body Background) */
+    --accent-color: #3a6186;      /* Deep Blue (Accent) */
+    --border-color: #333;         /* Dark border color */
+
+    /* NEW GRADIENT AND SHADOW COLORS */
+    --clear-btn-start: #3a6186;   /* Deep Blue Gradient start */
+    --clear-btn-end: #89253e;     /* Dark Red Gradient end */
+    --shadow-light: 0 4px 10px rgba(137, 37, 62, 0.2); /* Maroon glow shadow */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Mynerve", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color); /* Deep Black Background */
+    color: var(--accent-color);               /* Deep Blue Text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* 💥 Control Panel Style 💥 */
+.controls {
+    /* Layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    font-size:1.3rem;
+    /* Aesthetic Styling */
+    background-color: var(--secondary-color); /* Dark panel background */
+    border-radius: 12px;
+    /* Updated shadow to reflect the new color scheme */
+    box-shadow: 0 8px 15px rgba(58, 97, 134, 0.2);
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+/* Label Styling */
+label {
+    font-weight: 600;
+    color: var(--accent-color); /* Deep Blue Label Text */
+    white-space: nowrap;
+}
+
+#sizeValue {
+    font-weight: 700;
+    color: var(--primary-color); /* Maroon Accent */
+    padding-left: 5px;
+}
+
+/* Slider Styling (Updated for Dark Mode and New Colors) */
+input[type="range"] {
+    flex-grow: 1;
+    height: 6px;
+    background: var(--border-color); /* Dark track */
+    border-radius: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--primary-color); /* Maroon Thumb */
+    border-radius: 50%;
+    cursor: grab;
+    transition: background 0.2s, box-shadow 0.2s;
+    /* Updated glow to reflect new accent color */
+    box-shadow: 0 0 5px rgba(137, 37, 62, 0.5);
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #a93557; /* Slightly lighter maroon on hover */
+}
+
+/* Color Picker Styling */
+.color-label {
+    margin-left: 0;
+}
+
+#colorPicker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--secondary-color); /* Dark picker background */
+    border:None; /* Deep Blue Border */
+    width: 45px;
+    height: 45px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+
+#colorPicker:hover {
+    border-color: var(--primary-color); /* Maroon on hover */
+}
+
+/* 💥 UPDATED: Clear Button Style (Blue/Maroon Gradient) 💥 */
+#clearBtn {
+    /* 💥 Gradient Fill (Your requested colors) 💥 */
+    background: linear-gradient(to right, var(--clear-btn-start), var(--clear-btn-end));
+    color: #f0f0f0; /* Light text for contrast */
+    border: none;
+    padding: 10px 20px;
+    font-family:inherit;
+    /* Rounded Edges */
+    border-radius: 25px;
+
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    /* Updated shadow to match gradient start/end */
+    box-shadow: 0 4px 10px rgba(58, 97, 134, 0.4);
+}
+
+#clearBtn:hover {
+    /* Slightly adjusted gradient for hover */
+    background: linear-gradient(to right, #4c759f, #9c355c);
+    box-shadow: 0 6px 12px rgba(58, 97, 134, 0.6);
+    transform: translateY(-1px);
+}
+#clearBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(58, 97, 134, 0.3);
+}
+
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    /* Subtle dark border */
+    border: 1px solid var(--border-color);
+    /* Updated shadow to reflect new color scheme */
+    box-shadow: 0 4px 10px rgba(58, 97, 134, 0.2);
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 65vh;
+    max-height: 600px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Grid Cell */
+.grid-cell {
+    border: 1px solid #282828;
+    transition: background-color 0.1s;
+}
+
+/* Page Heading */
+.page-heading {
+    font-family:Kranky;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: var(--primary-color); /* Maroon Heading */
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent-color); /* Deep Blue Divider */
+}
