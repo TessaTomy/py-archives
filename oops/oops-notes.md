@@ -232,7 +232,7 @@ del r1
 ```
 -----
 
-## 12\. 🔗 Inheritance (Code Reusability)
+## 10\. 🔗 Inheritance (Code Reusability)
 
 Inheritance is a mechanism where a new class (**subclass** or **child**) derives attributes and methods from an existing class (**superclass** or **parent**), establishing an **`is-a` relationship**.
 
@@ -346,7 +346,7 @@ frog.move()
 
 -----
 
-## 13\. 🔄 Method Overriding
+## 11\. 🔄 Method Overriding
 
 **Method Overriding** is a core concept of polymorphism and inheritance. It occurs when a **subclass provides its own specific implementation** of a method that is already defined in its superclass.
 
@@ -380,4 +380,49 @@ c = Cat()
 print(a.make_sound()) # Output: Generic Animal Sound
 print(d.make_sound()) # Output: Bark! (Override of: Generic Animal Sound)
 print(c.make_sound()) # Output: Meow!
+```
+-----
+
+## 12\. ⚖️ Comparison Methods & Custom Sorting (Concise)
+
+Defining comparison Dunder Methods allows Python's built-in functions (`sorted()`, `min()`, etc.) to correctly order your custom objects.
+
+### A. Core Dunder Methods for Ordering
+
+| Operator | Dunder Method | Purpose | Built-in Use |
+| :--- | :--- | :--- | :--- |
+| `<` | `__lt__(self, other)` | **Less Than** | Primary method for **`sorted()`** and **`min()`** to establish order. |
+| `>` | `__gt__(self, other)` | **Greater Than** | Used by **`max()`**. |
+| `==` | `__eq__(self, other)` | **Equal To** | Required for comparison and by `@total_ordering`. |
+
+### B. Pythonic Sorting Logic
+
+The **`sorted()`** and **`list.sort()`** functions rely almost entirely on your implementation of the **`__lt__`** method.
+
+  * If `obj1.__lt__(obj2)` returns **`True`**, `obj1` is placed **before** `obj2` in the final list.
+  * By implementing `__lt__` and `__eq__`, you define the object's **natural ordering**.
+
+### C. 💡 Short Example
+
+```python
+class Item:
+    def __init__(self, num):
+        self.num = num
+    
+    # Python uses this to decide order: smallest number comes first.
+    def __lt__(self, other):
+        return self.num < other.num
+
+    def __repr__(self):
+        return f"Item({self.num})"
+
+data = [Item(3), Item(1), Item(2)]
+
+# sorted() repeatedly calls __lt__ to order the list.
+print(sorted(data)) 
+# Output: [Item(1), Item(2), Item(3)]
+
+# min() uses __lt__ to find the smallest element.
+print(min(data))
+# Output: Item(1)
 ```
