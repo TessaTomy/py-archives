@@ -108,9 +108,7 @@ Operators in Python are special symbols or keywords that perform operations on o
 - **Advantages**: Improves clarity, avoids repetition (`0 <= x and x <= y`).  
 - **Extension**: Works with numbers, strings, dates, and can chain more than two comparisons (`1 < x < 10 < y`).  
 ---
-Got it, Tessa — you want the notes **organized under a single heading**, instead of breaking them into multiple headers. Here’s how your **exam‑ready note on `input()`** looks when streamlined:
 
----
 # 📃 The `input()` Function in Python
 - **Definition**: `input()` is a built‑in function used to read user input from the keyboard. It always returns the input as a string.  
 - **Syntax**: `variable = input("Prompt message: ")` → displays the prompt, waits for user input, and stores the result.  
