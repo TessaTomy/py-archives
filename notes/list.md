@@ -183,11 +183,6 @@ sum(lst)       # sum of numeric elements
 sorted(lst)    # returns new sorted list
 list(range(5)) # → [0, 1, 2, 3, 4]
 ```
-
----
-
-Perfect, Tessa — let’s author a **complete, exam‑ready note on List Comprehensions** under Collections, with proper explanatory text, syntax blocks, examples, and edge cases. This will match the rhythm of your Tuples and Lists notes.
-
 ---
 
 ## List Comprehensions
